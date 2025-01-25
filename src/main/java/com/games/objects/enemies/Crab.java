@@ -28,7 +28,7 @@ public class Crab implements Enemy {
     }
 
     @Override
-    public boolean isAlive() {
+    public boolean getIsAlive() {
         return isAlive; 
     }
     

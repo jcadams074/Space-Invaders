@@ -27,7 +27,7 @@ public class Squid implements Enemy  {
     }
 
     @Override
-    public boolean isAlive() {
+    public boolean getIsAlive() {
        return isAlive;
     }
     

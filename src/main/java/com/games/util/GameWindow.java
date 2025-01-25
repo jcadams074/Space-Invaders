@@ -13,14 +13,18 @@ public class GameWindow {
     public GameWindow(){
         window.setBounds(650, 200, 1300, 1000);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        window.setVisible(true);
         window.getContentPane().setBackground(Color.BLACK);
 
         // For now everything will go in constructor, eventually gameplay elements won't be loaded until the game is actually started
         ImageIcon playerIcon = new ImageIcon(getClass().getResource("/temporary_player.png")); 
         JLabel playerLabel = new JLabel(playerIcon); 
-        playerLabel.setAlignmentX(650);
-        playerLabel.setAlignmentY(200);
+
+        
+
+        window.add(playerLabel); 
+
+        // Must be the last method called when creating the window. If this is called prior to adding any elements, they wont appear bc the frame will have already been rendered prior that code's execution.
+        window.setVisible(true);
     }
 
     public boolean getVisibility(){

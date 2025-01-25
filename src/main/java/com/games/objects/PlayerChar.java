@@ -4,7 +4,6 @@ public class PlayerChar {
 
     private boolean isAlive = true; 
 
-    private float yPos; 
     private float xPos; 
 
     // Add path to sprite file
@@ -18,20 +17,15 @@ public class PlayerChar {
     }
 
     public void moveLeft(){
-
+        setXPosition(xPos += 0.2);
     }
 
     public void moveRight(){
-
+        setXPosition(xPos -= 0.2);
     }
 
-    public boolean isAlive(){
+    public boolean getIsAlive(){
         return isAlive;
-    }
-
-    // Upate the Y Position
-    private void setYPosition(float yPos){
-        this.yPos = yPos; 
     }
 
     // Update the X Position

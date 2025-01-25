@@ -1,4 +1,4 @@
-package com.games;
+package com.games.util;
 
 public class GameManager {
 

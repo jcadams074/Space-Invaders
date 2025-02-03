@@ -1,5 +1,8 @@
 package com.games;
 
+import java.awt.event.KeyEvent;
+
+import com.games.objects.PlayerComponent;
 import com.games.util.GameManager;
 import com.games.util.GameWindow;
 
@@ -8,11 +11,13 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         // Creating the game window        
-        GameWindow window = new GameWindow(); 
+        PlayerComponent player = new PlayerComponent();
+        GameWindow window = new GameWindow(player); 
+        GameManager manager = new GameManager(player);
 
         // While statement for the game loop (ends when window is closed)
         while(window.getVisibility() == true){
-            GameManager.listenForInput();
-        }
+            // manager.keyPressed(KeyEvent);
+        }   
     }
 }

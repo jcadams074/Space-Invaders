@@ -39,10 +39,16 @@ public class GameManager extends JComponent implements KeyListener{
 
         switch (e.getKeyCode()) {
             case KeyEvent.VK_RIGHT:
-                player.moveRight();
+            // Preventing player from moving off screen to right
+                if((window.getWidth() - player.getXPosition()) > 120){
+                    player.moveRight();
+                }
                 break;
             case KeyEvent.VK_LEFT:  
-                player.moveLeft();
+            // Preventing player from moving off screen to left
+                if((window.getWidth() - player.getXPosition()) < 1280){
+                    player.moveLeft();
+                }
                 break;
             default:
                 break;

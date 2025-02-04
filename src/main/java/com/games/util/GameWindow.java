@@ -52,4 +52,12 @@ public class GameWindow extends JFrame {
     public boolean getVisibility(){
         return this.isVisible(); 
     }
+
+    public int getWidth(){
+        return WINDOW_WIDTH;
+    }
+
+    public int getHeight(){
+        return WINDOW_HEIGHT; 
+    }
 }

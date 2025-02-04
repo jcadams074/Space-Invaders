@@ -31,15 +31,21 @@ public class PlayerComponent extends JComponent{
     }
 
     public void moveLeft(){
-        playerXPos -= 13;
+        playerXPos -= 12;
+        System.out.println(playerXPos);
     }
 
     public void moveRight(){
-        playerXPos += 13;
+        playerXPos += 12;
+        System.out.println(playerXPos);
     }
 
-    public boolean getIsAlive(){
+    public boolean isAlive(){
         return isAlive;
+    }
+
+    public int getXPosition(){
+        return playerXPos; 
     }
 
     public void draw(Graphics g){

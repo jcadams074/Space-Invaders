@@ -15,28 +15,31 @@ public class GameWindow extends JFrame {
     private static final int WINDOW_WIDTH = 1300;
     private static final int WINDOW_HEIGHT = 1000;
 
-    PlayerComponent player; 
-
     public GameWindow(PlayerComponent player) {
-
-        this.player = player; 
 
         setTitle("Space Invaders");
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
 
-        // Create the game panel and add it to the frame
-        GamePanel panel = new GamePanel();
-        add(panel);
-
+        // Create the game panel and draw initial player
+        draw(player);
         setVisible(true);
     }
 
+    public void draw(PlayerComponent player){
+        GamePanel panel = new GamePanel(player);
+        add(panel);
+    }
+
     // Inner class for rendering
-    private class GamePanel extends JPanel {
-        public GamePanel() {
+    public class GamePanel extends JPanel {
+        PlayerComponent player; 
+
+        public GamePanel(PlayerComponent player) {
             setBackground(Color.BLACK);
+
+            this.player = player;
         }
 
         @Override

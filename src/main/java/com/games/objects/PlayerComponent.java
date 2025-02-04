@@ -31,11 +31,11 @@ public class PlayerComponent extends JComponent{
     }
 
     public void moveLeft(){
-        setAlignmentX(playerXPos -= 2);
+        playerXPos -= 13;
     }
 
     public void moveRight(){
-        setAlignmentX(playerXPos += 2);
+        playerXPos += 13;
     }
 
     public boolean getIsAlive(){
